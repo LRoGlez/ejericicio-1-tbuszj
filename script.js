@@ -17,10 +17,10 @@
 // Suerte!
 
 window.addEventListener("load", onLoad);
+let array1 = [];
+let array2 = [];
 
-function onLoad() {
-  let array1 = [];
-  let array2 = [];
+function createUsers() {
   const ob1 = {
     name: "usuario1",
     country: "spain",
@@ -64,6 +64,11 @@ function onLoad() {
     premiumAccount: false
   };
   array1.push(ob1, ob2, ob3, ob4, ob5, ob6, ob7);
+}
+
+function onLoad() {
+  createUsers();
+
   for (let i = 0; i < array1.length; i++) {
     if (array1[i].country === "spain" && array1[i].money > 200) {
       array2.push(array1[i]);
